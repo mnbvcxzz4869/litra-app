@@ -71,6 +71,7 @@ flutter:
     - assets/user_profile_images/
     - assets/banners/
     - assets/book_audio/
+    - assets/login_images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

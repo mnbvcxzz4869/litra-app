@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:litra/consts.dart';
 import 'package:litra/screens/login/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:litra/screens/navigation_bar.dart';
 import 'package:litra/provider/firebase_user_provider.dart';
 import 'firebase_options.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
 
 final theme = ThemeData(
   useMaterial3: true,
@@ -27,6 +29,7 @@ final theme = ThemeData(
 );
 
 void main() async{
+  Gemini.init(apiKey: GEMINI_API_KEY); 
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:litra/screens/book_details/book_details.dart';
 import 'package:litra/screens/book_listen/listen.dart';
 import 'package:litra/screens/book_read/read.dart';
+import 'package:litra/screens/library/ai_recap.dart';
 
 // Displays a book from the user's library with reading progress
 
@@ -125,7 +126,12 @@ class LibraryBooksWidget extends StatelessWidget {
   Widget _buildRewards(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Open summary page for AI summary
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => AiRecap(book: book, chapterProgress: book.chapterProgress),
+          ),
+        );
       },
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),

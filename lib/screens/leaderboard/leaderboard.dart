@@ -86,6 +86,7 @@ class LeaderboardScreen extends ConsumerWidget {
                 ),
                 const SizedBox(width: 16),
                 Container(
+                  width: 80,
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                   decoration: BoxDecoration(
                     color: isCurrentUser

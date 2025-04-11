@@ -1,4 +1,4 @@
-// book model
+// Book model
 class Chapter {
   final String chapterId;
   final int chapterNum;

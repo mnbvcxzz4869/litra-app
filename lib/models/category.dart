@@ -1,4 +1,4 @@
-// category
+// Category
 class Category{
   const Category({
     required this.id,

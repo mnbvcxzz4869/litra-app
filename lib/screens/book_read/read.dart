@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter/rendering.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:litra/models/book.dart';
 import 'package:litra/provider/library_provider.dart';
 import 'package:litra/provider/reading_theme_provider.dart';
@@ -10,6 +8,9 @@ import 'package:litra/screens/book_read/customise_view.dart';
 import 'package:litra/screens/book_read/focus_mode_overlay.dart';
 import 'package:litra/screens/book_read/navigation_widget.dart';
 import 'package:litra/provider/highlight_provider.dart';
+import 'highlight_text.dart';
+
+// Main screen for reading book content 
 
 class ReadScreen extends ConsumerStatefulWidget {
   const ReadScreen({super.key, required this.chapter, required this.book});
@@ -151,21 +152,25 @@ class _ReadScreenState extends ConsumerState<ReadScreen> {
                             
                             return GestureDetector(
                               onTapUp: (details) {
-                                _handleTextTapAccurate(
+                                handleTextTapAccurate(
                                   details, 
                                   content, 
                                   highlights, 
                                   textKey,
                                   readingTheme,
+                                  ref,
+                                  widget.chapter.chapterId,
+                                  _currentHighlightColor,
                                 );
                               },
                               child: RichText(
                                 key: textKey,
                                 text: TextSpan(
-                                  children: _buildHighlightedText(
+                                  children: buildHighlightedText(
                                     content,
                                     highlights,
                                     readingTheme,
+                                    _currentHighlightColor
                                   ),
                                 ),
                               ),
@@ -187,146 +192,5 @@ class _ReadScreenState extends ConsumerState<ReadScreen> {
         ],
       ),
     );
-  }
-
-  void _handleTextTapAccurate(
-    TapUpDetails details, 
-    String content, 
-    List<HighlightRange> highlights,
-    GlobalKey textKey,
-    ReadingTheme readingTheme,
-  ) {
-    try {
-      final RenderObject? renderObj = textKey.currentContext?.findRenderObject();
-      if (renderObj is! RenderParagraph) return;
-
-      final RenderParagraph renderParagraph = renderObj;
-
-      final Offset localPosition = renderParagraph.globalToLocal(details.globalPosition);
-      
-      final TextPosition textPosition = renderParagraph.getPositionForOffset(localPosition);
-      final int tappedIndex = textPosition.offset;
-      
-      debugPrint('Tapped index: $tappedIndex');
-      if (tappedIndex < 0 || tappedIndex >= content.length) return;
-      
-      final existingHighlight = highlights.firstWhere(
-        (h) => h.start <= tappedIndex && h.end > tappedIndex,
-        orElse: () => HighlightRange(-1, -1),
-      );
-
-      if (existingHighlight.start != -1) {
-        debugPrint('Removing highlight: ${existingHighlight.start} - ${existingHighlight.end}');
-        ref.read(highlightProvider(widget.chapter.chapterId).notifier)
-            .removeHighlight(existingHighlight);
-      } else {
-        final int wordStart = _findWordStart(content, tappedIndex);
-        final int wordEnd = _findWordEnd(content, tappedIndex);
-        
-        debugPrint('Adding highlight: $wordStart - $wordEnd');
-        debugPrint('Word: "${content.substring(wordStart, wordEnd)}"');
-        
-        final newHighlight = HighlightRange(wordStart, wordEnd, color: _currentHighlightColor);
-        ref.read(highlightProvider(widget.chapter.chapterId).notifier)
-            .addHighlight(newHighlight);
-      }
-    } catch (e) {
-      debugPrint('Error handling text tap: $e');
-    }
-  }
-
-  int _findWordStart(String content, int index) {
-    while (index > 0 && content[index - 1] != ' ' && content[index - 1] != '\n') {
-      index--;
-    }
-    return index;
-  }
-
-  int _findWordEnd(String content, int index) {
-    while (index < content.length && content[index] != ' ' && content[index] != '\n') {
-      index++;
-    }
-    return index;
-  }
-
-  List<TextSpan> _buildHighlightedText(
-    String content,
-    List<HighlightRange> highlights,
-    ReadingTheme readingTheme,
-  ) {
-    if (highlights.isEmpty) {
-      return [
-        TextSpan(
-          text: content,
-          style: GoogleFonts.getFont(
-            readingTheme.fontFamily,
-            fontSize: readingTheme.fontSize,
-            height: readingTheme.lineHeight,
-            letterSpacing: readingTheme.letterSpacing,
-            fontWeight: readingTheme.fontWeight == 'Bold'
-                ? FontWeight.bold
-                : FontWeight.normal,
-            color: readingTheme.fontColor,
-          ),
-        ),
-      ];
-    }
-
-    final sortedHighlights = [...highlights]..sort((a, b) => a.start.compareTo(b.start));
-    final spans = <TextSpan>[];
-    int currentIndex = 0;
-
-    for (final range in sortedHighlights) {
-      if (currentIndex < range.start) {
-        spans.add(TextSpan(
-          text: content.substring(currentIndex, range.start),
-          style: GoogleFonts.getFont(
-            readingTheme.fontFamily,
-            fontSize: readingTheme.fontSize,
-            height: readingTheme.lineHeight,
-            letterSpacing: readingTheme.letterSpacing,
-            fontWeight: readingTheme.fontWeight == 'Bold'
-                ? FontWeight.bold
-                : FontWeight.normal,
-            color: readingTheme.fontColor,
-          ),
-        ));
-      }
-
-      spans.add(TextSpan(
-        text: content.substring(range.start, range.end),
-        style: GoogleFonts.getFont(
-          readingTheme.fontFamily,
-          fontSize: readingTheme.fontSize,
-          height: readingTheme.lineHeight,
-          letterSpacing: readingTheme.letterSpacing,
-          fontWeight: readingTheme.fontWeight == 'Bold'
-              ? FontWeight.bold
-              : FontWeight.normal,
-          color: readingTheme.fontColor,
-          backgroundColor: range.color ?? _currentHighlightColor,
-        ),
-      ));
-
-      currentIndex = range.end;
-    }
-
-    if (currentIndex < content.length) {
-      spans.add(TextSpan(
-        text: content.substring(currentIndex),
-        style: GoogleFonts.getFont(
-          readingTheme.fontFamily,
-          fontSize: readingTheme.fontSize,
-          height: readingTheme.lineHeight,
-          letterSpacing: readingTheme.letterSpacing,
-          fontWeight: readingTheme.fontWeight == 'Bold'
-              ? FontWeight.bold
-              : FontWeight.normal,
-          color: readingTheme.fontColor,
-        ),
-      ));
-    }
-
-    return spans;
   }
 }

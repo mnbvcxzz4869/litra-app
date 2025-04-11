@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:litra/models/book.dart';
 
+/// Provider for accessing and managing the user's book library
 final libraryProvider = StateNotifierProvider<LibraryNotifier, List<Book>>((ref) {
   return LibraryNotifier();
 });
@@ -10,6 +11,7 @@ final lastAddedBookProvider = Provider<Book?>((ref) {
   return library.isNotEmpty ? library.first : null;
 });
 
+// Manages the state of the user's book library
 class LibraryNotifier extends StateNotifier<List<Book>> {
   LibraryNotifier() : super([]);
 

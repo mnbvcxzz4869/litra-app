@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:litra/provider/library_provider.dart';
 import 'package:litra/screens/library/library_books_widget.dart';
 
+// Displays the user's collection of books with reading progress
+
 class LibraryScreen extends ConsumerWidget {
   const LibraryScreen({super.key});
 
@@ -11,7 +13,7 @@ class LibraryScreen extends ConsumerWidget {
     final library = ref.watch(libraryProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('My Library 📚')),
+      appBar: AppBar(title: const Text('My Library 📚'), automaticallyImplyLeading: false,),
       body: Container(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
         child: ListView.builder(

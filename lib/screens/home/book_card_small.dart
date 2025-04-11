@@ -1,7 +1,8 @@
-// Book card small for home slider
 import 'package:flutter/material.dart';
 import 'package:litra/models/book.dart';
 import 'package:litra/screens/book_details/book_details.dart';
+
+// A compact book card widget that displays cover, title, and author
 
 class BookCardSmall extends StatelessWidget {
   const BookCardSmall({super.key, required this.book});

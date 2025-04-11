@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:litra/provider/leaderboard_provider.dart';
 import 'package:litra/provider/user_data_provider.dart'; 
 
+// Displays leaderboard sorted by level and experience points
+ 
 class LeaderboardScreen extends ConsumerWidget {
   const LeaderboardScreen({super.key});
 
@@ -12,7 +14,7 @@ class LeaderboardScreen extends ConsumerWidget {
     final currentUser = ref.watch(userProvider); 
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Leaderboard 🏆')),
+      appBar: AppBar(title: const Text('Leaderboard 🏆'), automaticallyImplyLeading: false,),
       body: ListView.builder(
         itemCount: leaderboard.length,
         itemBuilder: (context, index) {

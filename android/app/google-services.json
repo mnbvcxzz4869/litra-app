@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "647765502431",
+    "firebase_url": "https://litra-1e77c-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "litra-1e77c",
+    "storage_bucket": "litra-1e77c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647765502431:android:2c9695fd20ee7cc5133c6a",
+        "android_client_info": {
+          "package_name": "com.example.litra"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKorhyqr8zXKAfeZP-CnrrBNfv22Q3LI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

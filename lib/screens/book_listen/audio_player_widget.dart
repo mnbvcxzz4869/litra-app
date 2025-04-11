@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
+// A customizable audio player control panel widget
 class AudioPlayerWidget extends StatefulWidget {
   final AudioPlayer audioPlayer;
   final bool isPlaying;

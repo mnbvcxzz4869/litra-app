@@ -3,6 +3,7 @@ import 'package:litra/models/book.dart';
 import 'package:litra/screens/book_listen/listen.dart';
 import 'package:litra/screens/book_read/read.dart';
 
+// Displays a list of chapters for a book with options to read or listen
 class BookChaptersList extends StatelessWidget {
   const BookChaptersList({super.key, required this.book, required this.chapters});
   final Book book;

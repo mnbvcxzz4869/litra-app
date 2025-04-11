@@ -7,6 +7,7 @@ import 'package:litra/screens/book_listen/listen_chapter_list.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:litra/provider/user_data_provider.dart';
 
+// Audio player screen for books that allows users to listen to chapters
 class ListenScreen extends ConsumerStatefulWidget {
   final Book book;
   final Chapter chapter;
@@ -57,6 +58,7 @@ class _ListenScreenState extends ConsumerState<ListenScreen> {
   ref.read(libraryProvider.notifier).addBook(book);
   ref.read(libraryProvider.notifier).updateProgress(book.bookId, listenedChapters);
 
+  
   ref.read(userProvider.notifier).update(25, 15);
   ScaffoldMessenger.of(context).showSnackBar(
     const SnackBar(
@@ -175,6 +177,7 @@ class _ListenScreenState extends ConsumerState<ListenScreen> {
 
             const SizedBox(height: 16),
 
+            // Display current chapter information
             Text(
               'Chapter ${widget.chapter.chapterNum}',
               style: Theme.of(context).textTheme.titleSmall,

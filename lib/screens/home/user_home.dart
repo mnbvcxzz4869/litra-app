@@ -1,7 +1,8 @@
-// widget to display user profile in the home screen
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:litra/provider/user_data_provider.dart';
+
+// Displays the user's profile information in the home screen
 
 class UserHome extends ConsumerStatefulWidget {
   const UserHome({super.key});

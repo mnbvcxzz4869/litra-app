@@ -3,6 +3,8 @@ import 'package:litra/screens/book_details/book_details.dart';
 import 'package:litra/screens/book_listen/listen.dart';
 import 'package:litra/screens/book_read/read.dart';
 
+// Displays a book from the user's library with reading progress
+
 class LibraryBooksWidget extends StatelessWidget {
   final dynamic book;
   final double progress;

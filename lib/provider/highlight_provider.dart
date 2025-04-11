@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+// Represents a highlighted text range in a book chapter
+// Stores the start and end positions of the highlight and an optional color
 class HighlightRange {
   final int start;
   final int end;
@@ -25,8 +27,7 @@ class HighlightRange {
       color: json['color'] != null ? _stringToColor(json['color'] as String) : null,
     );
   }
-  
- 
+
   static String _colorToString(Color color) {
     return '${color.a},${color.r},${color.g},${color.b}';
   }
@@ -37,10 +38,12 @@ class HighlightRange {
   }
 }
 
+// Provider that manages highlights for a specific chapter
 final highlightProvider = StateNotifierProvider.family<HighlightNotifier, List<HighlightRange>, String>(
   (ref, chapterId) => HighlightNotifier(chapterId),
 );
 
+// Manages the creation, storage, and retrieval of text highlights
 class HighlightNotifier extends StateNotifier<List<HighlightRange>> {
   final String chapterId;
 

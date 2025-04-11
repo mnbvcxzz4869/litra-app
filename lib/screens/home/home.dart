@@ -1,20 +1,21 @@
-// home page
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:litra/data/books_data.dart';
-import 'package:litra/data/user_data.dart';
 import 'package:litra/provider/library_provider.dart';
+import 'package:litra/provider/user_data_provider.dart';
 import 'package:litra/screens/home/banner_carousel.dart';
 import 'package:litra/screens/home/book_card_slider.dart';
 import 'package:litra/screens/library/library_books_widget.dart';
 import 'package:litra/screens/home/user_home.dart';
 
+// Main home screen
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final lastAddedBook = ref.watch(lastAddedBookProvider); // Use the reactive provider
+    final lastAddedBook = ref.watch(lastAddedBookProvider);
+    final currentUser = ref.watch(userProvider);
 
     return SafeArea(
       child: Scaffold(
@@ -27,7 +28,7 @@ class HomeScreen extends ConsumerWidget {
               children: [
                 // Header text
                 Text(
-                  'Hey, ${userData[0].name} 👋',
+                  'Hey, ${currentUser.name} 👋',
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                         fontWeight: FontWeight.w500,
                         color: Theme.of(context).colorScheme.onSurface,

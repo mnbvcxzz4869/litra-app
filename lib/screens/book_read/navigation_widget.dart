@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:litra/models/book.dart';
 import 'package:litra/screens/book_read/read.dart';
 
+// Handles navigation between book chapters
+
 class NavigationWidget extends StatelessWidget {
   final Chapter currentChapter;
   final Book book;
@@ -51,6 +53,8 @@ class NavigationWidget extends StatelessWidget {
     );
   }
 
+ 
+  // Finds the target chapter by its number and navigates to it
   void _navigateToChapter(BuildContext context, int chapterNum) {
     final targetChapter = book.chapters.firstWhere(
       (chapter) => chapter.chapterNum == chapterNum,

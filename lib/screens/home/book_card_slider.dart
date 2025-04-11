@@ -1,7 +1,8 @@
-// Book card slider for home
 import 'package:flutter/material.dart';
 import 'package:litra/models/book.dart';
 import 'package:litra/screens/home/book_card_small.dart';
+
+// For displaying categorized book collections on the home screen
 
 class BookCardSlider extends StatelessWidget {
   const BookCardSlider({

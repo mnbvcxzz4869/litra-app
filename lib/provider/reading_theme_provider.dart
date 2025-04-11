@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+/// Models the customizable appearance settings for the book reading
 class ReadingTheme {
   final String fontFamily;
   final String fontWeight;
@@ -21,7 +22,6 @@ class ReadingTheme {
     this.backgroundColor = const Color(0xFFFBF8F2),
     this.fontColor = const Color(0xFF000000), 
   });
-
 
   ReadingTheme copyWith({
     String? fontFamily,
@@ -46,6 +46,7 @@ class ReadingTheme {
   }
 }
 
+/// Provider for accessing and managing the reading theme settings
 final readingThemeProvider = StateNotifierProvider<ReadingThemeNotifier, ReadingTheme>((ref) {
   return ReadingThemeNotifier();
 });

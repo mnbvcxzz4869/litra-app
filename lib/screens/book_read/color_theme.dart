@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:litra/provider/reading_theme_provider.dart';
 
+// A selectable color theme option for the reading screen
+
 class ColorTheme extends StatelessWidget {
   const ColorTheme({
     super.key,

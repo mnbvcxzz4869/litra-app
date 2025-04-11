@@ -1,32 +1,48 @@
 import 'package:flutter/material.dart';
-import 'package:litra/screens/login/signup_page.dart';
+import 'package:litra/screens/login/login_page.dart';
 import 'package:litra/screens/navigation_bar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
+
+// Authentication screen that allows users to sign up to the app
 
 final _firebase = FirebaseAuth.instance;
 
-// Authentication screen that allows users to log in to the app
-
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SignupPage extends StatefulWidget {
+  const SignupPage({super.key});
 
   @override
-  LoginPageState createState() => LoginPageState();
+  SignupPageState createState() => SignupPageState();
 }
 
-class LoginPageState extends State<LoginPage> {
+class SignupPageState extends State<SignupPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   Future<void> _submit() async {
     if (_formKey.currentState?.validate() ?? false) {
       try {
-        await _firebase.signInWithEmailAndPassword(
+        final userCredential = await _firebase.createUserWithEmailAndPassword(
           email: _emailController.text.trim(),
           password: _passwordController.text.trim(),
         );
+
         if (mounted) {
+          DatabaseReference userRef = FirebaseDatabase.instance.ref().child('users');
+          String uid = userCredential.user!.uid;
+          String name = _nameController.text.trim();
+          userRef.child(uid).set({
+              'name': name,
+              'email': _emailController.text.trim(),
+              'uid': uid,
+              'profilePicture': 'assets/user_profile_images/1.jpg',
+              'level': 0,
+              'exp': 0,
+              'coin': 0,
+          });
+          
           Navigator.push(
             context,
             MaterialPageRoute(
@@ -38,18 +54,14 @@ class LoginPageState extends State<LoginPage> {
         if (mounted) {
           ScaffoldMessenger.of(context).clearSnackBars();
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Login failed: ${e.message}'),
-            ),
+            SnackBar(content: Text('Signup failed: ${e.message}')),
           );
         }
       }
     } else {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Please fix the errors in the form.'),
-          ),
+          const SnackBar(content: Text('Please fix the errors in the form.')),
         );
       }
     }
@@ -83,7 +95,7 @@ class LoginPageState extends State<LoginPage> {
               children: [
                 SizedBox(height: 12),
                 Text(
-                  'Log in to your Litra Account',
+                  'Create your Litra Account',
                   style: TextStyle(
                     fontSize: 24,
                     color: Theme.of(context).colorScheme.onSurface,
@@ -99,6 +111,24 @@ class LoginPageState extends State<LoginPage> {
                 ),
                 SizedBox(height: 36),
                 TextFormField(
+                  controller: _nameController,
+                  decoration: InputDecoration(
+                    labelText: 'Name',
+                    hintText: 'Enter your name',
+                    border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: Theme.of(context).colorScheme.surface,
+                  ),
+                  keyboardType: TextInputType.name,
+                  validator: (value) {
+                    if (value == null) {
+                      return 'Please enter a valid name';
+                    }
+                    return null;
+                  },
+                ),
+                SizedBox(height: 24),
+                TextFormField(
                   controller: _emailController,
                   decoration: InputDecoration(
                     labelText: 'Email',
@@ -109,7 +139,9 @@ class LoginPageState extends State<LoginPage> {
                   ),
                   keyboardType: TextInputType.emailAddress,
                   validator: (value) {
-                    if (value == null || value.trim().isEmpty || !value.contains('@')) {
+                    if (value == null ||
+                        value.trim().isEmpty ||
+                        !value.contains('@')) {
                       return 'Please enter a valid email';
                     }
                     return null;
@@ -133,28 +165,9 @@ class LoginPageState extends State<LoginPage> {
                     return null;
                   },
                 ),
-                SizedBox(height: 16,),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                      padding: EdgeInsets.zero, 
-                      minimumSize: Size(0, 0),
-                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    ),
-                    child: Text(
-                      'Forgot Password?',
-                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          fontWeight: FontWeight.w600,
-                          color: Theme.of(context).colorScheme.primary
-                      ),
-                    ),
-                  ),
-                ),
                 SizedBox(height: 24),
                 GestureDetector(
-                  onTap: _submit,
+                  onTap: () => _submit(),
                   child: Container(
                     width: double.infinity,
                     height: 50,
@@ -163,7 +176,9 @@ class LoginPageState extends State<LoginPage> {
                       color: Theme.of(context).colorScheme.primary,
                       boxShadow: [
                         BoxShadow(
-                          color: Theme.of(context).colorScheme.tertiary.withAlpha(120),
+                          color: Theme.of(
+                            context,
+                          ).colorScheme.tertiary.withAlpha(120),
                           blurRadius: 4,
                           offset: const Offset(0, 2),
                         ),
@@ -171,7 +186,7 @@ class LoginPageState extends State<LoginPage> {
                     ),
                     alignment: Alignment.center,
                     child: Text(
-                      'Log in',
+                      'Sign in',
                       style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).colorScheme.surface,
@@ -200,7 +215,7 @@ class LoginPageState extends State<LoginPage> {
                 // SizedBox(height: 24),
                 // GestureDetector(
                 //   onTap: () {
-        
+
                 //   },
                 //   child: Container(
                 //     width: double.infinity,
@@ -239,23 +254,25 @@ class LoginPageState extends State<LoginPage> {
                 // SizedBox(height: 16),
                 Center(
                   child: TextButton(
-                     onPressed: () {
-                      Navigator.push(context, 
-                        MaterialPageRoute(
-                          builder: (context) => SignupPage(),
-                        ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
                       );
                     },
                     child: Text.rich(
                       TextSpan(
-                        text: "Don’t have an account? ",
+                        text: "Have an account? ",
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Theme.of(context).colorScheme.tertiary),
+                          color: Theme.of(context).colorScheme.tertiary,
+                        ),
                         children: [
                           TextSpan(
-                            text: 'Sign up',
-                            style: TextStyle(color: Theme.of(context).colorScheme.primary),
+                            text: 'Log In',
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
                           ),
                         ],
                       ),

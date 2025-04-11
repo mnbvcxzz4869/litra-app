@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:litra/models/book.dart';
 
+// Displays a selectable list of chapters for the audio player
 class ListenChapterList extends StatelessWidget {
   final Book book;
   final String currentChapterId;

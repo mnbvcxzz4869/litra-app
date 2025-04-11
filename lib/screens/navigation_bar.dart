@@ -1,10 +1,11 @@
-// navigation bar
 import 'package:flutter/material.dart';
 import 'package:litra/screens/home/home.dart';
 import 'package:litra/screens/leaderboard/leaderboard.dart';
 import 'package:litra/screens/library/library.dart';
 import 'package:litra/screens/profile.dart';
 import 'package:litra/screens/search/search.dart';
+
+// Main navigation controller for the app
 
 class NavigationBarScreen extends StatefulWidget {
   const NavigationBarScreen({super.key});

@@ -1,3 +1,5 @@
+// Dummy data for leaderboard
+
 import 'package:litra/models/user.dart';
 
 final leaderboardData = [

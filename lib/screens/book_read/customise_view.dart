@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:litra/provider/reading_theme_provider.dart';
 import 'package:litra/screens/book_read/color_theme.dart';
 
+// A bottom sheet modal that allows users to customize their reading experience
+
 class CustomiseViewModal extends ConsumerWidget {
   const CustomiseViewModal({super.key});
 

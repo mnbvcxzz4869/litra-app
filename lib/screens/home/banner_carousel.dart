@@ -1,6 +1,6 @@
-// Home banner carousel
 import 'package:flutter/material.dart';
 
+/// An auto-sliding carousel widget for displaying promotional banners
 class BannerCarousel extends StatefulWidget {
   final List<String> imagePaths;
 

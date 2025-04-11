@@ -1,10 +1,15 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 
+// Provider to manage the focus mode state throughout the app
 final focusModeProvider = StateNotifierProvider<FocusModeNotifier, FocusModeState>(
   (ref) => FocusModeNotifier(),
 );
 
+// Represents the state of the focus mode feature
+// - isActive: Whether focus mode is currently running
+// - remainingTime: Seconds left in the current focus session
+// - position: Position of the focus mode timer overlay on screen
 class FocusModeState {
   final bool isActive;
   final int remainingTime; 
@@ -29,6 +34,7 @@ class FocusModeState {
   }
 }
 
+// Manages the focus mode state and timer functionality
 class FocusModeNotifier extends StateNotifier<FocusModeState> {
   FocusModeNotifier()
       : super(FocusModeState(

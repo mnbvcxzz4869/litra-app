@@ -1,4 +1,4 @@
-// dummy user data
+// Dummy user data
 import 'package:litra/models/user.dart';
 
 final userData = [

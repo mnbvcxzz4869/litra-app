@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:litra/screens/login/login_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:litra/screens/navigation_bar.dart';
+import 'package:litra/provider/firebase_user_provider.dart';
+import 'firebase_options.dart';
 
 final theme = ThemeData(
   useMaterial3: true,
@@ -22,18 +26,33 @@ final theme = ThemeData(
   ),
 );
 
-void main(){
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const ProviderScope(child: App()));
 }
 
-class App extends StatelessWidget{
+class App extends ConsumerWidget {
   const App({super.key});
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context, WidgetRef ref) {
+    final authState = ref.watch(authStateProvider);
+    
     return MaterialApp(
       theme: theme,
-      home: LoginPage(),
+      home: authState.when(
+        data: (user) {
+          if (user != null) {
+            return const NavigationBarScreen();
+          }
+          return const LoginPage();
+        },
+        loading: () => const Center(child: CircularProgressIndicator()),
+        error: (_, __) => const LoginPage(),
+      ),
     );
   }
 }

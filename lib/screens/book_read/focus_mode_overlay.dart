@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:litra/provider/focus_mode_provider.dart';
 
+// A draggable overlay widget that provides a focus timer functionality
+
 class FocusModeOverlay extends ConsumerStatefulWidget {
   const FocusModeOverlay({super.key});
 

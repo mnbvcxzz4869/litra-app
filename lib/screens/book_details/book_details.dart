@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:litra/models/book.dart';
 import 'package:litra/models/category.dart';
 import 'package:litra/screens/book_details/book_chapter_list.dart';
+
+// Displays detailed information about a book
 class BookDetails extends StatelessWidget {
   const BookDetails({super.key, required this.book});
 

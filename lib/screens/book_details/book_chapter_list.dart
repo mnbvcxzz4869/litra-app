@@ -46,6 +46,8 @@ class BookChaptersList extends StatelessWidget {
                   Text(
                     chapter.chapterTitle,
                     style: Theme.of(context).textTheme.bodyMedium,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1, 
                   ),
                 ],
               ),

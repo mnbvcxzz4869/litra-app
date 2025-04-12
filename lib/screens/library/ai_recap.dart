@@ -27,6 +27,7 @@ class _AiRecapState extends State<AiRecap> {
   Future<void> _getRecap() async {
     setState(() {
       isLoading = true;
+      summary = null; // Clear previous summary
     });
 
     try {
@@ -44,7 +45,7 @@ class _AiRecapState extends State<AiRecap> {
           .take(widget.chapterProgress)
           .map(
             (chapter) => chapter.chapterContent.join("\n\n"),
-          ) 
+          )
           .join("\n\n");
 
       if (combinedContent.isEmpty) {
@@ -55,7 +56,7 @@ class _AiRecapState extends State<AiRecap> {
         return;
       }
 
-      final promptText = "Summarize the book content in 5 paragraph:\n\n$combinedContent";
+      final promptText = "Summarize the book content in 5 paragraphs:\n\n$combinedContent";
 
       final response = await Gemini.instance.prompt(
         parts: [Part.text(promptText)],
@@ -67,7 +68,7 @@ class _AiRecapState extends State<AiRecap> {
       });
     } catch (e) {
       setState(() {
-        summary = "Failed to generate summary. Please try again later.";
+        summary = "Failed to generate summary. Please check your connection or try again later.";
         isLoading = false;
       });
     }
@@ -78,16 +79,23 @@ class _AiRecapState extends State<AiRecap> {
     return Scaffold(
       appBar: AppBar(title: const Text('AI Recap'), centerTitle: true),
       body: isLoading
-          ? const Center(child: CircularProgressIndicator()) // Centered loader
-          : SingleChildScrollView(
-              child: Container(
-                padding: const EdgeInsets.all(16),
-                child: Text(
-                  summary ?? "No summary available.",
-                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 16),
+          ? const Center(child: CircularProgressIndicator()) 
+          : summary == null
+              ? Center(
+                  child: ElevatedButton(
+                    onPressed: _getRecap,
+                    child: const Text("Retry"),
+                  ),
+                )
+              : SingleChildScrollView(
+                  child: Container(
+                    padding: const EdgeInsets.all(16),
+                    child: Text(
+                      summary!,
+                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 16),
+                    ),
+                  ),
                 ),
-              ),
-            ),
     );
   }
 }

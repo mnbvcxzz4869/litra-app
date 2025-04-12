@@ -186,7 +186,7 @@ class SignupPageState extends State<SignupPage> {
                     ),
                     alignment: Alignment.center,
                     child: Text(
-                      'Sign in',
+                      'Sign Up',
                       style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).colorScheme.surface,

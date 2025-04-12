@@ -37,19 +37,15 @@ class LoginPageState extends State<LoginPage> {
       } on FirebaseAuthException catch (e) {
         if (mounted) {
           ScaffoldMessenger.of(context).clearSnackBars();
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Login failed: ${e.message}'),
-            ),
-          );
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(SnackBar(content: Text('Login failed: ${e.message}')));
         }
       }
     } else {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Please fix the errors in the form.'),
-          ),
+          const SnackBar(content: Text('Please fix the errors in the form.')),
         );
       }
     }
@@ -109,7 +105,9 @@ class LoginPageState extends State<LoginPage> {
                   ),
                   keyboardType: TextInputType.emailAddress,
                   validator: (value) {
-                    if (value == null || value.trim().isEmpty || !value.contains('@')) {
+                    if (value == null ||
+                        value.trim().isEmpty ||
+                        !value.contains('@')) {
                       return 'Please enter a valid email';
                     }
                     return null;
@@ -133,21 +131,26 @@ class LoginPageState extends State<LoginPage> {
                     return null;
                   },
                 ),
-                SizedBox(height: 16,),
+                SizedBox(height: 16),
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).clearSnackBars();
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('Feature under development')),
+                      );
+                    },
                     style: TextButton.styleFrom(
-                      padding: EdgeInsets.zero, 
+                      padding: EdgeInsets.zero,
                       minimumSize: Size(0, 0),
                       tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     ),
                     child: Text(
                       'Forgot Password?',
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          fontWeight: FontWeight.w600,
-                          color: Theme.of(context).colorScheme.primary
+                        fontWeight: FontWeight.w600,
+                        color: Theme.of(context).colorScheme.primary,
                       ),
                     ),
                   ),
@@ -163,7 +166,9 @@ class LoginPageState extends State<LoginPage> {
                       color: Theme.of(context).colorScheme.primary,
                       boxShadow: [
                         BoxShadow(
-                          color: Theme.of(context).colorScheme.tertiary.withAlpha(120),
+                          color: Theme.of(
+                            context,
+                          ).colorScheme.tertiary.withAlpha(120),
                           blurRadius: 4,
                           offset: const Offset(0, 2),
                         ),
@@ -171,7 +176,7 @@ class LoginPageState extends State<LoginPage> {
                     ),
                     alignment: Alignment.center,
                     child: Text(
-                      'Log in',
+                      'Log In',
                       style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).colorScheme.surface,
@@ -200,7 +205,7 @@ class LoginPageState extends State<LoginPage> {
                 // SizedBox(height: 24),
                 // GestureDetector(
                 //   onTap: () {
-        
+
                 //   },
                 //   child: Container(
                 //     width: double.infinity,
@@ -239,11 +244,10 @@ class LoginPageState extends State<LoginPage> {
                 // SizedBox(height: 16),
                 Center(
                   child: TextButton(
-                     onPressed: () {
-                      Navigator.push(context, 
-                        MaterialPageRoute(
-                          builder: (context) => SignupPage(),
-                        ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignupPage()),
                       );
                     },
                     child: Text.rich(
@@ -251,11 +255,14 @@ class LoginPageState extends State<LoginPage> {
                         text: "Don’t have an account? ",
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                           fontWeight: FontWeight.bold,
-                          color: Theme.of(context).colorScheme.tertiary),
+                          color: Theme.of(context).colorScheme.tertiary,
+                        ),
                         children: [
                           TextSpan(
-                            text: 'Sign up',
-                            style: TextStyle(color: Theme.of(context).colorScheme.primary),
+                            text: 'Sign Up',
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
                           ),
                         ],
                       ),

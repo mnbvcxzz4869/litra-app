@@ -1,5 +1,4 @@
-# LITRA
-##### Gamify Your Reading - Make Books as Fun as Games!
+# LITRA ##### Gamify Your Reading - Make Books as Fun as Games!
 By ultratehmanis
 
 Anggota:
@@ -9,6 +8,7 @@ Hustler - Celine Yovela
 Hacker - Kisusherly Annelise
 
 Hipster - Joyce Velensia
+
 
 Litra adalah aplikasi berbasis gamifikasi yang dirancang untuk meningkatkan minat baca, khususnya bagi penghidap ADHD _(Attention Deficit Hyperactivity Disorder)_. Litra diharapkan dapat membantu pengguna membangun kebiasaan membaca dengan pengalaman yang menyenangkan.
 

@@ -1,8 +1,6 @@
 # LITRA
 ##### Gamify Your Reading - Make Books as Fun as Games!
-By ultratehmanis
-
-Anggota:
+**By ultratehmanis:**
 
 Hustler - Celine Yovela
 

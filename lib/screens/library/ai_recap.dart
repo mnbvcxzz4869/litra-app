@@ -44,7 +44,7 @@ class _AiRecapState extends State<AiRecap> {
           .take(widget.chapterProgress)
           .map(
             (chapter) => chapter.chapterContent.join("\n\n"),
-          ) // Join the list of strings
+          ) 
           .join("\n\n");
 
       if (combinedContent.isEmpty) {
@@ -77,20 +77,17 @@ class _AiRecapState extends State<AiRecap> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('AI Recap'), centerTitle: true),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          child:
-              isLoading
-                  ? Center(child: const CircularProgressIndicator())
-                  : Text(
-                    summary ?? "No summary available.",
-                    style: Theme.of(
-                      context,
-                    ).textTheme.bodyMedium!.copyWith(fontSize: 16),
-                  ),
-        ),
-      ),
+      body: isLoading
+          ? const Center(child: CircularProgressIndicator()) // Centered loader
+          : SingleChildScrollView(
+              child: Container(
+                padding: const EdgeInsets.all(16),
+                child: Text(
+                  summary ?? "No summary available.",
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 16),
+                ),
+              ),
+            ),
     );
   }
 }

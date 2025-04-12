@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:litra/consts.dart';
+import 'package:litra/.env.dart';
 import 'package:litra/screens/login/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:litra/screens/navigation_bar.dart';

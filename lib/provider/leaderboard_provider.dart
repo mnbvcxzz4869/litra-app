@@ -14,7 +14,8 @@ class LeaderboardNotifier extends StateNotifier<List<User>> {
       if (next.value == null) {
         state = leaderboardData;
       } else if (next.value != null && previous?.value == null) {
-        state = [];
+        // User just logged in - fetch data immediately
+        _fetchUserData(next.value!.uid);
       }
     });
   
@@ -23,7 +24,7 @@ class LeaderboardNotifier extends StateNotifier<List<User>> {
         updateUser(next);
       }
     });
-    
+     
     ref.listen<AsyncValue<List<User>>>(allUsersProvider, (_, next) {
       next.whenData((users) {
         if (users.isNotEmpty) {
@@ -32,35 +33,79 @@ class LeaderboardNotifier extends StateNotifier<List<User>> {
         }
       });
     });
+
+    if (authState.value != null) {
+      _initializeLeaderboard();
+    }
   }
 
   final Ref ref;
 
+  // Fetches specific user data by ID
+  Future<void> _fetchUserData(String userId) async {
+    try {
+      final allUsers = await ref.read(allUsersProvider.future);
+      if (allUsers.isNotEmpty) {
+        state = [...allUsers];
+        _sortLeaderboard();
+        return;
+      }
+    } catch (e) {
+      // 
+    }
+
+    _initializeLeaderboard();
+  }
+
+  // Fetches all users and updates the leaderboard
+  Future<void> _initializeLeaderboard() async {
+    try {
+      final users = await ref.read(allUsersProvider.future);
+      if (users.isNotEmpty) {
+        state = [...users];
+        _sortLeaderboard();
+      }
+    } catch (e) {
+      // 
+    }
+  }
+
   // Updates user in the leaderboard and re-sorts
   void updateUser(User updatedUser) {
-    if (updatedUser.id == '0') return; 
+    if (updatedUser.id == '0') return;
     
-    state = state.map((user) {
-      if (user.id == updatedUser.id) {
-        return updatedUser.copyWith(
-          exp: updatedUser.exp,
-          coin: updatedUser.coin,
-          level: updatedUser.level,
-        );
-      }
-      return user;
-    }).toList();
+    bool userExists = state.any((user) => user.id == updatedUser.id);
+    
+    if (userExists) {
+      state = state.map((user) {
+        if (user.id == updatedUser.id) {
+          return updatedUser.copyWith(
+            exp: updatedUser.exp,
+            coin: updatedUser.coin,
+            level: updatedUser.level,
+          );
+        }
+        return user;
+      }).toList();
+    } else {
+      state = [...state, updatedUser];
+    }
     _sortLeaderboard();
   }
 
   // Sorts the leaderboard by level and exp
   void _sortLeaderboard() {
-    state.sort((a, b) {
+    final sortedList = List<User>.from(state);
+    sortedList.sort((a, b) {
       if (b.level == a.level) {
         return b.exp.compareTo(a.exp); 
       }
       return b.level.compareTo(a.level);
     });
+    
+    if (sortedList.isNotEmpty) {
+      state = sortedList;
+    }
   }
 }
 

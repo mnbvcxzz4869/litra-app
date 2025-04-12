@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 // Book model
 class Chapter {
   final String chapterId;
@@ -8,7 +10,7 @@ class Chapter {
   final DateTime? dateAccess;
   bool isReadRewardClaimed;
   bool isListenRewardClaimed;
-  
+
   Chapter({
     required this.chapterId,
     required this.chapterNum,
@@ -19,6 +21,36 @@ class Chapter {
     this.isReadRewardClaimed = false,
     this.isListenRewardClaimed = false,
   });
+
+  // Create a Chapter from JSON
+  factory Chapter.fromJson(Map<String, dynamic> json) {
+    return Chapter(
+      chapterId: json['chapterId'],
+      chapterNum: json['chapterNum'],
+      chapterTitle: json['chapterTitle'],
+      chapterContent: List<String>.from(json['chapterContent']),
+      audioFile: json['audioFile'],
+      dateAccess: json['dateAccess'] != null
+          ? DateTime.parse(json['dateAccess'])
+          : null,
+      isReadRewardClaimed: json['isReadRewardClaimed'] ?? false,
+      isListenRewardClaimed: json['isListenRewardClaimed'] ?? false,
+    );
+  }
+
+  // Convert Chapter to JSON
+  Map<String, dynamic> toJson() {
+    return {
+      'chapterId': chapterId,
+      'chapterNum': chapterNum,
+      'chapterTitle': chapterTitle,
+      'chapterContent': chapterContent,
+      'audioFile': audioFile,
+      'dateAccess': dateAccess?.toIso8601String(),
+      'isReadRewardClaimed': isReadRewardClaimed,
+      'isListenRewardClaimed': isListenRewardClaimed,
+    };
+  }
 }
 
 class Book {
@@ -27,7 +59,7 @@ class Book {
   final String cover;
   final double rating;
   final int totalRead;
-  final List<String> category; 
+  final List<String> category;
   final String author;
   final int year;
   final String synopsis;
@@ -49,4 +81,42 @@ class Book {
     this.chapterProgress = 0,
     required this.chapters,
   });
+
+  // Create a Book from JSON
+  factory Book.fromJson(Map<String, dynamic> json) {
+    return Book(
+      bookId: json['bookId'],
+      title: json['title'],
+      cover: json['cover'],
+      rating: json['rating'].toDouble(),
+      totalRead: json['totalRead'],
+      category: List<String>.from(json['category']),
+      author: json['author'],
+      year: json['year'],
+      synopsis: json['synopsis'],
+      totalChapter: json['totalChapter'],
+      chapterProgress: json['chapterProgress'] ?? 0,
+      chapters: (json['chapters'] as List)
+          .map((chapterJson) => Chapter.fromJson(chapterJson))
+          .toList(),
+    );
+  }
+
+  // Convert Book to JSON
+  Map<String, dynamic> toJson() {
+    return {
+      'bookId': bookId,
+      'title': title,
+      'cover': cover,
+      'rating': rating,
+      'totalRead': totalRead,
+      'category': category,
+      'author': author,
+      'year': year,
+      'synopsis': synopsis,
+      'totalChapter': totalChapter,
+      'chapterProgress': chapterProgress,
+      'chapters': chapters.map((chapter) => chapter.toJson()).toList(),
+    };
+  }
 }

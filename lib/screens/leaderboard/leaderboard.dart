@@ -2,28 +2,92 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:litra/provider/leaderboard_provider.dart';
 import 'package:litra/provider/user_data_provider.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:litra/models/user.dart';
 
 // Displays leaderboard sorted by level and experience points
 
-class LeaderboardScreen extends ConsumerWidget {
+class LeaderboardScreen extends ConsumerStatefulWidget {
   const LeaderboardScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<LeaderboardScreen> createState() => _LeaderboardScreenState();
+}
+
+class _LeaderboardScreenState extends ConsumerState<LeaderboardScreen> {
+  bool _isLoading = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _refreshLeaderboard();
+  }
+
+  Future<void> _refreshLeaderboard() async {
+    setState(() {
+      _isLoading = true;
+    });
+
+    try {
+      final snapshot = await FirebaseDatabase.instance.ref().child('users').get();
+      if (snapshot.exists && snapshot.value != null) {
+        final usersData = snapshot.value as Map<dynamic, dynamic>;
+        final users = <User>[];
+
+        usersData.forEach((key, value) {
+          if (value is Map<dynamic, dynamic>) {
+            try {
+              users.add(User(
+                id: value['uid'] as String,
+                name: value['name'] as String,
+                profilePicture: value['profilePicture'] as String,
+                level: value['level'] as int,
+                exp: value['exp'] as int,
+                coin: value['coin'] as int,
+              ));
+            } catch (e) {
+              print('Error parsing user data: $e');
+            }
+          }
+        });
+
+        if (users.isNotEmpty) {
+          for (final user in users) {
+            ref.read(leaderboardProvider.notifier).updateUser(user);
+          }
+        }
+      }
+    } catch (e) {
+      print('Error refreshing leaderboard: $e');
+    } finally {
+      setState(() {
+        _isLoading = false;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final leaderboardAsync = ref.watch(leaderboardProvider);
+    final currentUser = ref.watch(userProvider);
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Leaderboard 🏆'),
         automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh),
+            onPressed: _refreshLeaderboard,
+          ),
+        ],
       ),
-      body: leaderboardAsync.isEmpty
+      body: _isLoading || leaderboardAsync.isEmpty
           ? const Center(child: CircularProgressIndicator())
           : ListView.builder(
               itemCount: leaderboardAsync.length,
               itemBuilder: (context, index) {
                 final user = leaderboardAsync[index];
-                final currentUser = ref.watch(userProvider);
                 final isCurrentUser = user.id == currentUser.id;
 
                 return Container(
@@ -92,7 +156,7 @@ class LeaderboardScreen extends ConsumerWidget {
                       ),
                       const SizedBox(width: 16),
                       Container(
-                        width: 80,
+                        width: 100,
                         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                         decoration: BoxDecoration(
                           color: isCurrentUser

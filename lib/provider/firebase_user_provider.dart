@@ -2,13 +2,13 @@ import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:litra/models/user.dart';
+import 'dart:async';
 
 // Provides Firebase Auth instance
 final firebaseAuthProvider = Provider<auth.FirebaseAuth>((ref) {
   return auth.FirebaseAuth.instance;
 });
 
-// Listens to authentication state changes
 final authStateProvider = StreamProvider<auth.User?>((ref) {
   return ref.read(firebaseAuthProvider).authStateChanges();
 });
@@ -18,8 +18,6 @@ final authUserProvider = Provider<auth.User?>((ref) {
   return ref.watch(authStateProvider).value;
 });
 
-// Fetches detailed user data from Firebase Realtime Database for the currently 
-// authenticated user and maps it to our app's User model
 final firebaseUserProvider = FutureProvider<User?>((ref) async {
   final authUser = ref.watch(authUserProvider);
   if (authUser == null) return null;
@@ -50,9 +48,14 @@ final firebaseUserProvider = FutureProvider<User?>((ref) async {
 
 // Streams a list of all users from the database
 final allUsersProvider = StreamProvider<List<User>>((ref) {
-  return FirebaseDatabase.instance.ref().child('users').onValue.map((event) {
+  final controller = StreamController<List<User>>();
+  
+  final subscription = FirebaseDatabase.instance.ref().child('users').onValue.listen((event) {
     final dataSnapshot = event.snapshot;
-    if (dataSnapshot.value == null) return [];
+    if (dataSnapshot.value == null) {
+      controller.add([]);
+      return;
+    }
 
     final usersData = dataSnapshot.value as Map<dynamic, dynamic>;
     final users = <User>[];
@@ -72,7 +75,48 @@ final allUsersProvider = StreamProvider<List<User>>((ref) {
           print('Error parsing user data: $e');
         }
       }
-    });
-    return users;
+    }
+  );
+
+    controller.add(users);
+  }, onError: (error) {
+    print('Error in allUsersProvider: $error');
+    controller.addError(error);
   });
+
+  // Get the data immediately once
+  FirebaseDatabase.instance.ref().child('users').get().then((snapshot) {
+    if (snapshot.value == null) return;
+    
+    final usersData = snapshot.value as Map<dynamic, dynamic>;
+    final users = <User>[];
+
+    usersData.forEach((key, value) {
+      if (value is Map<dynamic, dynamic>) {
+        try {
+          users.add(User(
+            id: value['uid'] as String,
+            name: value['name'] as String,
+            profilePicture: value['profilePicture'] as String,
+            level: value['level'] as int,
+            exp: value['exp'] as int,
+            coin: value['coin'] as int,
+          ));
+        } catch (e) {
+          print('Error parsing user data: $e');
+        }
+      }
+    });
+    
+    controller.add(users);
+  }).catchError((error) {
+    print('Error in initial data fetch: $error');
+  });
+
+  ref.onDispose(() {
+    subscription.cancel();
+    controller.close();
+  });
+
+  return controller.stream;
 });

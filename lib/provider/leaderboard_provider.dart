@@ -10,67 +10,54 @@ class LeaderboardNotifier extends StateNotifier<List<User>> {
     final authState = ref.read(authStateProvider);
     state = authState.value != null ? [] : leaderboardData;
     
+ 
     ref.listen(authStateProvider, (previous, next) {
       if (next.value == null) {
         state = leaderboardData;
-      } else if (next.value != null && previous?.value == null) {
-        // User just logged in - fetch data immediately
-        _fetchUserData(next.value!.uid);
+      } else if (next.value != null) {
+        
+        _forceRefresh();
       }
     });
   
+
     ref.listen<User>(userProvider, (previous, next) {
       if (next.id != '0') {
         updateUser(next);
       }
     });
-     
+    
     ref.listen<AsyncValue<List<User>>>(allUsersProvider, (_, next) {
       next.whenData((users) {
         if (users.isNotEmpty) {
           state = [...users];
-          _sortLeaderboard();
+          _sortLeaderboard(); // Make sure we sort after setting state
         }
       });
     });
 
     if (authState.value != null) {
-      _initializeLeaderboard();
+      _forceRefresh();
     }
   }
 
   final Ref ref;
-
-  // Fetches specific user data by ID
-  Future<void> _fetchUserData(String userId) async {
+  
+  // Force refresh data
+  Future<void> _forceRefresh() async {
     try {
-      final allUsers = await ref.read(allUsersProvider.future);
-      if (allUsers.isNotEmpty) {
-        state = [...allUsers];
-        _sortLeaderboard();
-        return;
-      }
+      final usersAsync = ref.read(allUsersProvider);
+      usersAsync.whenData((users) {
+        if (users.isNotEmpty) {
+          state = [...users];
+        }
+      });
     } catch (e) {
-      // 
-    }
-
-    _initializeLeaderboard();
-  }
-
-  // Fetches all users and updates the leaderboard
-  Future<void> _initializeLeaderboard() async {
-    try {
-      final users = await ref.read(allUsersProvider.future);
-      if (users.isNotEmpty) {
-        state = [...users];
-        _sortLeaderboard();
-      }
-    } catch (e) {
-      // 
+      print('Error refreshing leaderboard: $e');
     }
   }
 
-  // Updates user in the leaderboard and re-sorts
+  // Updates user in the leaderboard
   void updateUser(User updatedUser) {
     if (updatedUser.id == '0') return;
     
@@ -79,21 +66,18 @@ class LeaderboardNotifier extends StateNotifier<List<User>> {
     if (userExists) {
       state = state.map((user) {
         if (user.id == updatedUser.id) {
-          return updatedUser.copyWith(
-            exp: updatedUser.exp,
-            coin: updatedUser.coin,
-            level: updatedUser.level,
-          );
+          return updatedUser;
         }
         return user;
       }).toList();
     } else {
       state = [...state, updatedUser];
     }
-    _sortLeaderboard();
+    
+    _sortLeaderboard(); // Ensure we sort after any changes
   }
 
-  // Sorts the leaderboard by level and exp
+  // Keep sorting logic in this central method
   void _sortLeaderboard() {
     final sortedList = List<User>.from(state);
     sortedList.sort((a, b) {
@@ -103,9 +87,7 @@ class LeaderboardNotifier extends StateNotifier<List<User>> {
       return b.level.compareTo(a.level);
     });
     
-    if (sortedList.isNotEmpty) {
-      state = sortedList;
-    }
+    state = sortedList;
   }
 }
 

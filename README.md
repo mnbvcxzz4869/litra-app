@@ -1,5 +1,5 @@
 # LITRA
-###### Gamify Your Reading - Make Books as Fun as Games!
+##### Gamify Your Reading - Make Books as Fun as Games!
 By ultratehmanis
 
 Anggota:

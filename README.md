@@ -1,16 +1,21 @@
-# litra
+# LITRA
+## Gamify Your Reading - Make Books as Fun as Games!
+By ultratehmanis
 
-A new Flutter project.
+Anggota:
+Hustler - Celine Yovela
+Hacker - Kisusherly Annelise
+Hipster - Joyce Velensia
 
-## Getting Started
+Litra adalah aplikasi berbasis gamifikasi yang dirancang untuk meningkatkan minat baca, khususnya bagi penghidap ADHD _(Attention Deficit Hyperactivity Disorder)_. Litra diharapkan dapat membantu pengguna membangun kebiasaan membaca dengan pengalaman yang menyenangkan.
 
-This project is a starting point for a Flutter application.
+## Fitur Utama
+⭐ **Sistem Poin & Level** - Dapat poin dan XP setiap selesai membaca/mendengar buku.
+🏆 **Leaderboard** - Kompetisi sehat dengan peringkat global
+🎯 **Focus Mode** - Aktifkan mode _Do Not Disturb_ dan Pomodoro Timer untuk meminimalkan distraksi
+📌 **Highlight Text** - Sorot bagian yang penting pada buku
+⚙️ **Customized Font & Background** - Atur tampilan text dan latar belakang sesuai preferensi
+📝 **AI Recap** - Ringkasan otomatis untuk membantu mengingat kembali isi buku
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

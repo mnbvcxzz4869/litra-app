@@ -73,12 +73,15 @@ class LibraryBooksWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 12),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    _buildActionButton(context, book),
-                    if (book.chapterProgress < book.totalChapter) _buildRewards(context),
+                    Expanded(child: _buildActionButton(context, book)),
+                    if (book.chapterProgress < book.totalChapter)
+                      const SizedBox(width: 8), 
+                    if (book.chapterProgress < book.totalChapter)
+                      Expanded(child: _buildRewards(context)),
                   ],
                 ),
               ],
@@ -105,7 +108,7 @@ class LibraryBooksWidget extends StatelessWidget {
         }
       },
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 36),
+        height: 40, // Fixed height
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(4),
@@ -134,7 +137,7 @@ class LibraryBooksWidget extends StatelessWidget {
         );
       },
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+        height: 40, // Fixed height
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(4),

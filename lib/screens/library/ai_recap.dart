@@ -27,7 +27,7 @@ class _AiRecapState extends State<AiRecap> {
   Future<void> _getRecap() async {
     setState(() {
       isLoading = true;
-      summary = null; // Clear previous summary
+      summary = null;
     });
 
     try {
@@ -88,11 +88,13 @@ class _AiRecapState extends State<AiRecap> {
                   ),
                 )
               : SingleChildScrollView(
-                  child: Container(
-                    padding: const EdgeInsets.all(16),
-                    child: Text(
-                      summary!,
-                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 16),
+                  child: SafeArea(
+                    child: Container(
+                      padding: const EdgeInsets.all(16),
+                      child: Text(
+                        summary!,
+                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(fontSize: 16),
+                      ),
                     ),
                   ),
                 ),

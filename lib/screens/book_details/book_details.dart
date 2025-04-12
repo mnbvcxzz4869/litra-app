@@ -138,12 +138,16 @@ class BookDetails extends StatelessWidget {
                   children: [
                     Text('⭐ ${book.rating}/5'),
                     VerticalDivider(
-                      color: Theme.of(context).colorScheme.tertiary.withAlpha(120),
+                      color: Theme.of(
+                        context,
+                      ).colorScheme.tertiary.withAlpha(120),
                       thickness: 1,
                     ),
                     Text('${book.totalRead} Reads'),
                     VerticalDivider(
-                      color: Theme.of(context).colorScheme.tertiary.withAlpha(120),
+                      color: Theme.of(
+                        context,
+                      ).colorScheme.tertiary.withAlpha(120),
                       thickness: 1,
                     ),
                     Text('${book.totalChapter} Chapters'),
@@ -151,42 +155,63 @@ class BookDetails extends StatelessWidget {
                 ),
               ),
             ),
-           
-          DefaultTabController(
-                length: 3,
-                child: Column(
-                  children: [
-                    TabBar(
-                      labelColor: Theme.of(context).colorScheme.primary,
-                      unselectedLabelColor:
-                          Theme.of(context).colorScheme.onSurfaceVariant,
-                      indicatorColor: Theme.of(context).colorScheme.primary,
-                      tabs: const [
-                        Tab(text: 'Synopsis'),
-                        Tab(text: 'Chapter'),
-                        Tab(text: 'Review'),
-                      ],
-                    ),
-                    AutoScaleTabBarView(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Text(
-                              book.synopsis,
-                              style: Theme.of(context).textTheme.bodyMedium,
-                            ),
+
+            DefaultTabController(
+              length: 3,
+              child: Column(
+                children: [
+                  TabBar(
+                    labelColor: Theme.of(context).colorScheme.primary,
+                    unselectedLabelColor:
+                        Theme.of(context).colorScheme.onSurfaceVariant,
+                    indicatorColor: Theme.of(context).colorScheme.primary,
+                    tabs: const [
+                      Tab(text: 'Synopsis'),
+                      Tab(text: 'Chapter'),
+                      Tab(text: 'Review'),
+                    ],
+                  ),
+                  AutoScaleTabBarView(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: SafeArea(
+                          child: Column(
+                            children: [
+                              Text(
+                                book.synopsis,
+                                style: Theme.of(context).textTheme.bodyMedium,
+                              ),
+                              SizedBox(height: 28),
+                            ],
                           ),
-                          BookChaptersList(book: book, chapters: book.chapters),
-                          Center(
-                            child: Text(
-                              'Under Development',
-                              style: Theme.of(context).textTheme.bodyMedium,
-                            ),
+                        ),
+                      ),
+                      BookChaptersList(book: book, chapters: book.chapters),
+                      Center(
+                        child: SafeArea(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              const SizedBox(height: 8),
+                              Image.asset(
+                                'assets/illustration/under-development.png',
+                                width: 200,
+                                height: 200,
+                              ),
+                              Text(
+                                'Under Development',
+                                style: Theme.of(context).textTheme.titleLarge,
+                              ),
+                              const SizedBox(height: 8),
+                            ],
                           ),
-                        ],
-                    ),
-                  ],
-                ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),

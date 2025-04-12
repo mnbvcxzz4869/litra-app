@@ -163,7 +163,7 @@ My companion smiled an enigmatical smile. “That’s just his little peculiarit
       Chapter(
         chapterId: '2',
         chapterNum: 2,
-        chapterTitle: 'The Science of Deduction',
+        chapterTitle: 'The Science of Deduct',
         chapterContent: ['''We met next day as he had arranged, and inspected the rooms at No. 221B, Baker Street, of which he had spoken at our meeting. They consisted of a couple of comfortable bed-rooms and a single large airy sitting-room, cheerfully furnished, and illuminated by two broad windows. So desirable in every way were the apartments, and so moderate did the terms seem when divided between us, that the bargain was concluded upon the spot, and we at once entered into possession. That very evening I moved my things round from the hotel, and on the following morning Sherlock Holmes followed me with several boxes and portmanteaus. For a day or two we were busily employed in unpacking and laying out our property to the best advantage. That done, we gradually began to settle down and to accommodate ourselves to our new surroundings.
 
 Holmes was certainly not a difficult man to live with. He was quiet in his ways, and his habits were regular. It was rare for him to be up after ten at night, and he had invariably breakfasted and gone out before I rose in the morning. Sometimes he spent his day at the chemical laboratory, sometimes in the dissecting-rooms, and occasionally in long walks, which appeared to take him into the lowest portions of the City. Nothing could exceed his energy when the working fit was upon him; but now and again a reaction would seize him, and for days on end he would lie upon the sofa in the sitting-room, hardly uttering a word or moving a muscle from morning to night. On these occasions I have noticed such a dreamy, vacant expression in his eyes, that I might have suspected him of being addicted to the use of some narcotic, had not the temperance and cleanliness of his whole life forbidden such a notion.
@@ -608,7 +608,7 @@ Leaning back in the cab, this amateur bloodhound carolled away like a lark while
       Chapter(
         chapterId: '5',
         chapterNum: 5,
-        chapterTitle: 'Our Advertisement Brings',
+        chapterTitle: 'Our Advertisement',
         chapterContent: ['''Our morning’s exertions had been too much for my weak health, and I was tired out in the afternoon. After Holmes’ departure for the concert, I lay down upon the sofa and endeavoured to get a couple of hours’ sleep. It was a useless attempt. My mind had been too much excited by all that had occurred, and the strangest fancies and surmises crowded into it. Every time that I closed my eyes I saw before me the distorted baboon-like countenance of the murdered man. So sinister was the impression which that face had produced upon me that I found it difficult to feel anything but gratitude for him who had removed its owner from the world. If ever human features bespoke vice of the most malignant type, they were certainly those of Enoch J. Drebber, of Cleveland. Still I recognized that justice must be done, and that the depravity of the victim was no condonement in the eyes of the law.
 
 The more I thought of it the more extraordinary did my companion’s hypothesis, that the man had been poisoned, appear. I remembered how he had sniffed his lips, and had no doubt that he had detected something which had given rise to the idea. Then, again, if not poison, what had caused the man’s death, since there was neither wound nor marks of strangulation? But, on the other hand, whose blood was that which lay so thickly upon the floor? There were no signs of a struggle, nor had the victim any weapon with which he might have wounded an antagonist. As long as all these questions were unsolved, I felt that sleep would be no easy matter, either for Holmes or myself. His quiet self-confident manner convinced me that he had already formed a theory which explained all the facts, though what it was I could not for an instant conjecture.
@@ -1034,7 +1034,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
     author: 'Juliana Silvia',
     year: 1997,
     synopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin ut enim sed vulputate. Suspendisse id magna vel ligula rutrum accumsan. Donec nec tempus orci. Sed tristique nisi in ligula imperdiet, in commodo nunc feugiat. Vivamus eleifend, tortor nec maximus molestie, enim nunc dapibus lorem, nec condimentum neque purus id magna. Pellentesque tincidunt varius justo sit amet tincidunt. Aenean eget tristique tortor. Phasellus eget nisl iaculis, efficitur orci in, maximus enim. Aliquam vitae nisi varius, dapibus sem eu, mollis lectus.',
-    totalChapter: 5,
+    totalChapter: 6,
     chapters: [
       Chapter(
         chapterId: '1',
@@ -1218,17 +1218,6 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         ],
         audioFile: 'book_audio/studyscarlet_1-5_doyle_64kb.mp3',
       ),
-      Chapter(
-        chapterId: '6',
-        chapterNum: 6,
-        chapterTitle: 'The Magic of Hogwarts',
-        chapterContent: ['Ut et odio fermentum, mattis ligula eu, mollis metus. Curabitur fringilla ipsum urna, id egestas tortor bibendum at. Etiam pharetra magna tristique nisl pulvinar ultricies. Proin lacinia diam ac diam posuere, a placerat odio aliquam. Nulla pellentesque ultrices ligula at ultrices. Aliquam erat volutpat. Donec erat tortor, auctor quis lorem eget, molestie porta sem. Aenean suscipit ut erat maximus mattis. Mauris sit amet volutpat libero. Curabitur eget odio nunc. Aliquam a lobortis justo, scelerisque pharetra turpis. Vestibulum arcu augue, viverra ut imperdiet in, luctus vel est.',
-        'Duis ac enim tempor, tincidunt risus eget, cursus est. Sed efficitur lacus erat. Pellentesque vitae leo suscipit, lacinia nibh eget, aliquet tortor. Quisque pellentesque, nibh eget efficitur eleifend, metus erat vehicula dolor, ac malesuada erat lacus sagittis turpis. Duis aliquam auctor sem at blandit. Sed laoreet metus nec diam dapibus, vel porttitor ipsum semper. Morbi erat nulla, fermentum vel lacus vulputate, efficitur ultrices nibh.',
-        'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
-        'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
-        ],
-        audioFile: 'book_audio/studyscarlet_1-6_doyle_64kb.mp3',
-      ),
     ],
   ),
   Book(
@@ -1288,7 +1277,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
     author: 'Estella Darcy',
     year: 2021,
     synopsis: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin ut enim sed vulputate. Suspendisse id magna vel ligula rutrum accumsan. Donec nec tempus orci. Sed tristique nisi in ligula imperdiet, in commodo nunc feugiat. Vivamus eleifend, tortor nec maximus molestie, enim nunc dapibus lorem, nec condimentum neque purus id magna. Pellentesque tincidunt varius justo sit amet tincidunt. Aenean eget tristique tortor. Phasellus eget nisl iaculis, efficitur orci in, maximus enim. Aliquam vitae nisi varius, dapibus sem eu, mollis lectus.',
-    totalChapter: 5,
+    totalChapter: 6,
     chapters: [
       Chapter(
         chapterId: '1',

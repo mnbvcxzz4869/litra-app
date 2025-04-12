@@ -64,8 +64,8 @@ class _SearchBarScreenState extends State<SearchBarScreen> {
                     const SizedBox(height: 8),
                     Image.asset(
                       'assets/illustration/search-notfound.png',
-                      width: 500,
-                      height: 500,
+                      width: 300,
+                      height: 300,
                     ),
                     Text(
                       'Ups!... no results found',

@@ -132,64 +132,69 @@ class _ReadScreenState extends ConsumerState<ReadScreen> {
           ),
         ],
       ),
-      body: Stack(
-        children: [
-          Container(
-            color: readingTheme.backgroundColor,
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Expanded(
-                  child: SingleChildScrollView(
-                    controller: _scrollController,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Builder(
-                          builder: (BuildContext context) {
-                            final GlobalKey textKey = GlobalKey();
-                            
-                            return GestureDetector(
-                              onTapUp: (details) {
-                                handleTextTapAccurate(
-                                  details, 
-                                  content, 
-                                  highlights, 
-                                  textKey,
-                                  readingTheme,
-                                  ref,
-                                  widget.chapter.chapterId,
-                                  _currentHighlightColor,
-                                );
-                              },
-                              child: RichText(
-                                key: textKey,
-                                text: TextSpan(
-                                  children: buildHighlightedText(
-                                    content,
-                                    highlights,
+      body: SafeArea(
+        child: Stack(
+          children: [
+            Container(
+              color: readingTheme.backgroundColor,
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: SingleChildScrollView(
+                      controller: _scrollController,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Builder(
+                            builder: (BuildContext context) {
+                              final GlobalKey textKey = GlobalKey();
+                              
+                              return GestureDetector(
+                                onTapUp: (details) {
+                                  handleTextTapAccurate(
+                                    details, 
+                                    content, 
+                                    highlights, 
+                                    textKey,
                                     readingTheme,
-                                    _currentHighlightColor
+                                    ref,
+                                    widget.chapter.chapterId,
+                                    _currentHighlightColor,
+                                  );
+                                },
+                                child: RichText(
+                                  key: textKey,
+                                  text: TextSpan(
+                                    children: buildHighlightedText(
+                                      content,
+                                      highlights,
+                                      readingTheme,
+                                      _currentHighlightColor
+                                    ),
                                   ),
                                 ),
-                              ),
-                            );
-                          },
-                        ),
-                        NavigationWidget(
-                          currentChapter: widget.chapter,
-                          book: widget.book,
-                        ),
-                      ],
+                              );
+                            },
+                          ),
+                          SafeArea(
+                            child: NavigationWidget(
+                              currentChapter: widget.chapter,
+                              book: widget.book,
+                            ),
+                          ),
+                          SizedBox(height: 16),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const FocusModeOverlay(),
-        ],
+            const FocusModeOverlay(),
+          ],
+        ),
       ),
     );
   }

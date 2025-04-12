@@ -22,7 +22,6 @@ class Chapter {
     this.isListenRewardClaimed = false,
   });
 
-  // Create a Chapter from JSON
   factory Chapter.fromJson(Map<String, dynamic> json) {
     return Chapter(
       chapterId: json['chapterId'],
@@ -38,7 +37,6 @@ class Chapter {
     );
   }
 
-  // Convert Chapter to JSON
   Map<String, dynamic> toJson() {
     return {
       'chapterId': chapterId,
@@ -82,7 +80,6 @@ class Book {
     required this.chapters,
   });
 
-  // Create a Book from JSON
   factory Book.fromJson(Map<String, dynamic> json) {
     return Book(
       bookId: json['bookId'],
@@ -102,7 +99,6 @@ class Book {
     );
   }
 
-  // Convert Book to JSON
   Map<String, dynamic> toJson() {
     return {
       'bookId': bookId,

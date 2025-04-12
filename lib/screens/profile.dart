@@ -32,16 +32,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
       body: Container(
         padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text("Under Development"),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _logout,
-              child: const Text('Logout'),
-            ),
-          ],
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const SizedBox(height: 8),
+              Image.asset(
+                'assets/illustration/under-development.png',
+                width: 500,
+                height: 500,
+              ),
+              Text(
+                'Under Development',
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(onPressed: _logout, child: const Text('Logout')),
+            ],
+          ),
         ),
       ),
     );

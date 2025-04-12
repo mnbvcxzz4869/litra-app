@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:litra/screens/search/category_books_filter.dart';
+import 'package:litra/screens/search/search_bar.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -21,8 +22,17 @@ class _SearchScreenState extends State<SearchScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextField(
+                readOnly: true,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SearchBarScreen(),
+                    ),
+                  );
+                },
                 decoration: InputDecoration(
-                  hintText: 'Search title, authors, or topics',
+                  hintText: 'Search title or authors',
                   prefixIcon: const Icon(Icons.search),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),

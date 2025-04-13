@@ -17,6 +17,9 @@ Litra adalah aplikasi berbasis gamifikasi yang dirancang untuk meningkatkan mina
 * ⚙️ **Customized Font & Background** - Atur tampilan text dan latar belakang sesuai preferensi.
 * 📝 **AI Recap** - Ringkasan otomatis untuk membantu mengingat kembali isi buku.
 
+## Screenshots
+<img src="screenshots/home.jpg" height="500em" />&nbsp;><img src="screenshots/read.jpg" height="500em" />&nbsp;><img src="screenshots/listen.jpg" height="500em" />
+
 ## Backup Links
 
 * [Drive Folder](https://drive.google.com/drive/folders/19kcuwErtT50QEb3hiMleu8uwWjiPfyGV?usp=drive_link)

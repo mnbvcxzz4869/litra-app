@@ -18,8 +18,9 @@ Litra adalah aplikasi berbasis gamifikasi yang dirancang untuk meningkatkan mina
 * 📝 **AI Recap** - Ringkasan otomatis untuk membantu mengingat kembali isi buku.
 
 ## Screenshots
-<img src="screenshots/home.jpg" height="500em" />&nbsp;<img src="screenshots/read.jpg" height="500em" />&nbsp;<img src="screenshots/listen.jpg" height="500em" />
-<img src="screenshots/custom.jpg" height="500em" />&nbsp;<img src="screenshots/search.jpg" height="500em" />&nbsp;<img src="screenshots/leadboard.jpg" height="500em" />
+<img src="screenshots/login.jpg" height="500em" />&nbsp;<img src="screenshots/home.jpg" height="500em" />&nbsp;<img src="screenshots/read.jpg" height="500em" />
+<img src="screenshots/custom.jpg" height="500em" />&nbsp;<img src="screenshots/listen.jpg" height="500em" />&nbsp;<img src="screenshots/search.jpg" height="500em" />
+<img src="screenshots/leadboard.jpg" height="500em" />&nbsp;<img src="screenshots/airecap.jpg" height="500em" />
 
 ## Backup Links
 

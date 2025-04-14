@@ -31,5 +31,5 @@ Unduh File 'Litra.apk' dari repositori di atas ke HP Android.
 * [Drive Folder](https://drive.google.com/drive/folders/19kcuwErtT50QEb3hiMleu8uwWjiPfyGV?usp=drive_link)
 * [Apk](https://drive.google.com/file/d/1woXjaxYH5HqwtFvug1DJkgdIpmAd9mth/view?usp=drive_link)
 * [Video Demo Aplikasi](https://drive.google.com/file/d/10FpPHk4xhx1F6VFbNgu4AirndpCT4Djd/view?usp=drive_link) 
-* [Pitch Deck]([https://drive.google.com/file/d/1-qBZPVt0vzATwKwmL0WxbEMbh1cW01my/view?usp=drive_link](https://drive.google.com/drive/folders/1dZuaMKgspiWh9cNzJLk312ihBZJL5-uA?usp=sharing))
+* [Pitch Deck](https://drive.google.com/drive/folders/1dZuaMKgspiWh9cNzJLk312ihBZJL5-uA?usp=sharing)
 

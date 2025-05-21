@@ -11,7 +11,7 @@ plugins {
 android {
     namespace = "com.example.litra"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = "29.0.13113456"
+    ndkVersion = flutter.ndkVersion
     
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

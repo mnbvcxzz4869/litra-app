@@ -158,7 +158,7 @@ My companion smiled an enigmatical smile. “That’s just his little peculiarit
 “Good-bye,” I answered, and strolled on to my hotel, considerably interested in my new acquaintance.
 
 '''],
-        audioFile: 'book_audio/studyscarlet_1-1_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '2',
@@ -276,7 +276,7 @@ Here was an opportunity of taking the conceit out of him. He little thought of t
 “A sergeant, sir, Royal Marine Light Infantry, sir. No answer? Right, sir.”
 
 He clicked his heels together, raised his hand in a salute, and was gone.'''],
-        audioFile: 'book_audio/studyscarlet_1-2_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '3',
@@ -484,7 +484,7 @@ Lestrade and Gregson glanced at each other with an incredulous smile.
 “Poison,” said Sherlock Holmes curtly, and strode off. “One other thing, Lestrade,” he added, turning round at the door: “‘Rache,’ is the German for ‘revenge;’ so don’t lose your time looking for Miss Rachel.”
 
 With which Parthian shot he walked away, leaving the two rivals open-mouthed behind him.'''],
-        audioFile: 'book_audio/studyscarlet_1-3_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '4',
@@ -603,7 +603,7 @@ We started off for the cab together, leaving our informant incredulous, but obvi
 “The ring, man, the ring: that was what he came back for. If we have no other way of catching him, we can always bait our line with the ring. I shall have him, Doctor—I’ll lay you two to one that I have him. I must thank you for it all. I might not have gone but for you, and so have missed the finest study I ever came across: a study in scarlet, eh? Why shouldn’t we use a little art jargon. There’s the scarlet thread of murder running through the colourless skein of life, and our duty is to unravel it, and isolate it, and expose every inch of it. And now for lunch, and then for Norman Neruda. Her attack and her bowing are splendid. What’s that little thing of Chopin’s she plays so magnificently: Tra-la-la-lira-lira-lay.”
 
 Leaning back in the cab, this amateur bloodhound carolled away like a lark while I meditated upon the many-sidedness of the human mind.'''],
-        audioFile: 'book_audio/studyscarlet_1-1_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '5',
@@ -718,7 +718,7 @@ It was close upon nine when he set out. I had no idea how long he might be, but 
 I was certainly feeling very weary, so I obeyed his injunction. I left Holmes seated in front of the smouldering fire, and long into the watches of the night I heard the low, melancholy wailings of his violin, and knew that he was still pondering over the strange problem which he had set himself to unravel.
 
 '''],
-        audioFile: 'book_audio/studyscarlet_1-1_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '6',
@@ -899,7 +899,7 @@ It was indeed Lestrade, who had ascended the stairs while we were talking, and w
 “Ah, you find it so, Mr. Lestrade!” cried Gregson, triumphantly. “I thought you would come to that conclusion. Have you managed to find the Secretary, Mr. Joseph Stangerson?”
 
 “The Secretary, Mr. Joseph Stangerson,” said Lestrade gravely, “was murdered at Halliday’s Private Hotel about six o’clock this morning.”'''],
-        audioFile: 'book_audio/studyscarlet_1-1_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '7',
@@ -1020,7 +1020,7 @@ The fellow came forward with a somewhat sullen, defiant air, and put down his ha
 The whole thing occurred in a moment—so quickly that I had no time to realize it. I have a vivid recollection of that instant, of Holmes’ triumphant expression and the ring of his voice, of the cabman’s dazed, savage face, as he glared at the glittering handcuffs, which had appeared as if by magic upon his wrists. For a second or two we might have been a group of statues. Then, with an inarticulate roar of fury, the prisoner wrenched himself free from Holmes’s grasp, and hurled himself through the window. Woodwork and glass gave way before him; but before he got quite through, Gregson, Lestrade, and Holmes sprang upon him like so many staghounds. He was dragged back into the room, and then commenced a terrific conflict. So powerful and so fierce was he, that the four of us were shaken off again and again. He appeared to have the convulsive strength of a man in an epileptic fit. His face and hands were terribly mangled by his passage through the glass, but loss of blood had no effect in diminishing his resistance. It was not until Lestrade succeeded in getting his hand inside his neckcloth and half-strangling him that we made him realize that his struggles were of no avail; and even then we felt no security until we had pinioned his feet as well as his hands. That done, we rose to our feet breathless and panting.
 
 “We have his cab,” said Sherlock Holmes. “It will serve to take him to Scotland Yard. And now, gentlemen,” he continued, with a pleasant smile, “we have reached the end of our little mystery. You are very welcome to put any questions that you like to me now, and there is no danger that I will refuse to answer them.”'''],
-        audioFile: 'book_audio/studyscarlet_1-1_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
     ],
   ),
@@ -1045,7 +1045,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-1_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '2',
@@ -1056,7 +1056,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-2_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '3',
@@ -1067,7 +1067,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-3_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '4',
@@ -1078,7 +1078,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-4_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '5',
@@ -1089,7 +1089,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-5_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '6',
@@ -1100,7 +1100,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-6_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
     ],
   ),
@@ -1125,7 +1125,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-1_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '2',
@@ -1136,7 +1136,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-2_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '3',
@@ -1147,7 +1147,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-3_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
     ],
   ),
@@ -1172,7 +1172,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-1_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '2',
@@ -1183,7 +1183,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-2_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '3',
@@ -1194,7 +1194,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-3_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '4',
@@ -1205,7 +1205,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-4_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '5',
@@ -1216,7 +1216,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-5_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
     ],
   ),
@@ -1241,7 +1241,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-1_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '2',
@@ -1252,7 +1252,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-2_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '3',
@@ -1263,7 +1263,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-3_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
     ],
   ),
@@ -1288,7 +1288,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-1_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '2',
@@ -1299,7 +1299,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-2_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '3',
@@ -1310,7 +1310,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-3_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '4',
@@ -1321,7 +1321,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-4_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '5',
@@ -1332,7 +1332,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-5_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
       Chapter(
         chapterId: '6',
@@ -1343,7 +1343,7 @@ The whole thing occurred in a moment—so quickly that I had no time to realize 
         'Pellentesque finibus ac felis quis sollicitudin. Nam lacinia dapibus est eget porttitor. Nunc vulputate arcu non magna ullamcorper dapibus. Maecenas at mi dui. Etiam elementum pulvinar odio, id convallis nibh interdum eu. Donec sit amet lacus sit amet ex porttitor luctus sit amet eget purus. Morbi at nisl nulla. Nunc sapien ipsum, consectetur congue hendrerit id, convallis sit amet sapien. Sed accumsan arcu a hendrerit feugiat. Praesent vitae accumsan dolor.',
         'Praesent consequat nunc eu purus bibendum dapibus a ac ex. Cras auctor odio justo, in porttitor risus eleifend et. Aenean in ante condimentum, convallis nibh eget, sollicitudin nisl. Aliquam eget tellus blandit, mollis lorem sit amet, dignissim orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce sit amet aliquet nunc, ac aliquet ex. Aenean maximus consequat lectus, ac feugiat augue accumsan sed. Nullam egestas eget turpis et laoreet. Sed ac tortor maximus, finibus eros ut, tincidunt urna. Phasellus accumsan sem eu elit finibus, in fermentum ante faucibus. Nulla faucibus imperdiet nisi, eget tempus massa facilisis et. Suspendisse rutrum lectus tellus, sit amet bibendum lacus laoreet vitae. Quisque urna nisi, pellentesque molestie mi nec, ullamcorper ultrices leo. Suspendisse et justo in nibh ultrices sagittis a nec nulla.',
         ],
-        audioFile: 'book_audio/studyscarlet_1-6_doyle_64kb.mp3',
+        audioFile: 'book_audio/studyscarlet_1-1.MP3',
       ),
     ],
   ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:litra/screens/home/home.dart';
 import 'package:litra/screens/leaderboard/leaderboard.dart';
 import 'package:litra/screens/library/library.dart';
-import 'package:litra/screens/profile.dart';
+import 'package:litra/screens/chatbot.dart';
 import 'package:litra/screens/search/search.dart';
 
 // Main navigation controller for the app
@@ -38,7 +38,7 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
     } else if (_selectedPageIndex == 3) {
       activePage = const LeaderboardScreen();
     } else if (_selectedPageIndex == 4) {
-      activePage = const ProfileScreen();
+      activePage = const ChatbotScreen();
     }
 
     return Scaffold(
@@ -64,8 +64,8 @@ class _NavigationBarScreenState extends State<NavigationBarScreen> {
             label: 'Leaderboard',
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.person),
-            label: 'Profile',
+            icon: const Icon(Icons.smart_toy),
+            label: 'AI Chatbot',
           ),
         ],
       ),

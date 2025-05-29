@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:litra/provider/user_data_provider.dart';
-
+import 'package:litra/screens/profile.dart';
 // Displays the user's profile information in the home screen
 
 class UserHome extends ConsumerStatefulWidget {
@@ -20,15 +20,22 @@ class _UserHomeState extends ConsumerState<UserHome> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        CircleAvatar(
-          radius: 32,
-          backgroundImage: AssetImage(user.profilePicture),
+        GestureDetector(
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const ProfileScreen()),
+            );
+          },
+          child: CircleAvatar(
+            radius: 32,
+            backgroundImage: AssetImage(user.profilePicture),
+          ),
         ),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12), 
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch, 
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -37,17 +44,17 @@ class _UserHomeState extends ConsumerState<UserHome> {
                     Text(
                       'Lvl ${user.level}',
                       style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        fontWeight: FontWeight.w500,
-                        color: Theme.of(context).colorScheme.onSurface,
-                        fontSize: 20,
-                      ),
+                            fontWeight: FontWeight.w500,
+                            color: Theme.of(context).colorScheme.onSurface,
+                            fontSize: 20,
+                          ),
                     ),
                     Text(
                       '${user.exp}/3000 XP',
                       style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                        color: Theme.of(context).colorScheme.primary, 
-                        fontWeight: FontWeight.w400,
-                      ),
+                            color: Theme.of(context).colorScheme.primary,
+                            fontWeight: FontWeight.w400,
+                          ),
                     ),
                   ],
                 ),
@@ -56,7 +63,8 @@ class _UserHomeState extends ConsumerState<UserHome> {
                   borderRadius: BorderRadius.circular(10),
                   child: LinearProgressIndicator(
                     value: user.exp / 3000,
-                    backgroundColor: Theme.of(context).colorScheme.tertiary.withAlpha(120),
+                    backgroundColor:
+                        Theme.of(context).colorScheme.tertiary.withAlpha(120),
                     color: Theme.of(context).colorScheme.primary,
                     minHeight: 6,
                   ),
@@ -82,9 +90,9 @@ class _UserHomeState extends ConsumerState<UserHome> {
               Text(
                 user.coin.toString(),
                 style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                  color: Theme.of(context).colorScheme.primary,
-                  fontWeight: FontWeight.w600,
-                ),
+                      color: Theme.of(context).colorScheme.primary,
+                      fontWeight: FontWeight.w600,
+                    ),
               )
             ],
           ),

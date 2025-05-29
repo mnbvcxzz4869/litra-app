@@ -136,9 +136,46 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
           Expanded(
             child: ListView.separated(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
-              itemCount: _messages.length,
+              itemCount: _isLoading ? _messages.length + 1 : _messages.length,
               separatorBuilder: (_, __) => const SizedBox(height: 6),
               itemBuilder: (context, idx) {
+                if (_isLoading && idx == _messages.length) {
+                  return Align(
+                    alignment: Alignment.centerLeft,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          constraints: const BoxConstraints(maxWidth: 340),
+                          padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 14),
+                          decoration: BoxDecoration(
+                            color: theme.colorScheme.surface,
+                            borderRadius: BorderRadius.circular(16).copyWith(
+                              bottomLeft: const Radius.circular(4),
+                            ),
+                            boxShadow: [BoxShadow(color: theme.colorScheme.primary.withAlpha(30), blurRadius: 6, offset: const Offset(0,2))],
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                alignment: Alignment.topLeft,
+                                width: 28,
+                                child: const Text('🤖', style: TextStyle(fontSize: 20)),
+                              ),
+                              const SizedBox(width: 8),
+                              const Text(
+                                '...',
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }
+
                 final msg = _messages[idx];
                 if (msg.isUser) {
                   return Align(
@@ -201,11 +238,6 @@ class _ChatbotScreenState extends State<ChatbotScreen> {
               },
             ),
           ),
-          if (_isLoading)
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: CircularProgressIndicator(),
-            ),
           Container(
             decoration: BoxDecoration(
               color: theme.colorScheme.surface,

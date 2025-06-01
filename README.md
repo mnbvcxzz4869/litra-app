@@ -16,7 +16,7 @@ Litra adalah aplikasi berbasis gamifikasi yang dirancang untuk meningkatkan mina
 * 📌 **Highlight Text** - Sorot bagian yang penting pada buku.
 * ⚙️ **Customized Font & Background** - Atur tampilan text dan latar belakang sesuai preferensi.
 * 📝 **AI Recap** - Ringkasan otomatis untuk membantu mengingat kembali isi buku.
-* 🤖 **AI Chatbot** - Memahami lebih dalam tentang isi buku yang telah Anda baca
+* 🤖 **AI Chatbot** - Memahami lebih dalam tentang isi buku yang telah dibaca
 
 ## Instalasi
 Unduh File 'Litra.apk' dari repositori di atas ke HP Android.
